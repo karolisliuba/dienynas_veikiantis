@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('student', 'StudentController');
 
 Route::resource('grades', 'GradesController');
+
+Route::get('/attendance/{id}', 'AttendanceController@show')->name('attendance.show');

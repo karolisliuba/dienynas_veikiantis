@@ -98,5 +98,20 @@
         </main>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var getDaysInMonth = function(month, year) {
+            return new Date(year, month, 0).getDate();
+
+        };
+
+        for ( var i = 1; i <= 12; i++ ) {
+           $('#month').append('<td> tekstas </td>');
+        }
+        // getDaysInMonth(i, 2020)
+        
+    });
+</script>
 
 </html>

@@ -40,13 +40,24 @@
                     @else
                     <p class="card-text">{{ $avgComponent }}</p>
                     @endif
-                    <a href="{{ route('student.edit', $student->id) }}" class="card-link">{{ __('Update student') }}</a>
-                    <a href="#" class="card-link">{{ __('Statistics') }}</a>
+                    @guest
+                    @else
+                    <div>
+                        <a href="{{ route('student.edit', $student->id) }}" class="card-link">{{ __('Update student') }}</a>
+                    </div>
+                    @endguest
+                    <hr>
+                    <div>
+                        <a href="{{ route('attendance.show', $student->id) }}" class="card-link">{{ __('Student attendance') }}</a>
+                    </div>
                 </div>
             </div>
 
         </div>
         <hr>
+        @guest
+
+        @else
         <div class="col-7">
             <h3>
                 Add grade
@@ -79,6 +90,8 @@
                 </div>
             </form>
         </div>
+        @endguest
+
     </div>
 </div>
 @endsection
