@@ -107,7 +107,8 @@
         };
 
         for ( var i = 1; i <= 12; i++ ) {
-           $('#month').append('<td> tekstas </td>');
+            var x = getDaysInMonth(i, 2020);
+           $('#month').append('<td>' + x + '</td>');
         }
         // getDaysInMonth(i, 2020)
         
