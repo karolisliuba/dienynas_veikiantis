@@ -110,7 +110,6 @@
             var x = getDaysInMonth(i, 2020);
            $('#month').append('<td>' + x + '</td>');
         }
-        // getDaysInMonth(i, 2020)
         
     });
 </script>
